@@ -9,7 +9,6 @@
     />
     <script
       async
-      type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/validator/13.0.0/validator.min.js"
     ></script>
     <link
@@ -20,7 +19,12 @@
       onload="this.onload=null;this.rel='stylesheet'"
     />
     <noscript>
-      <link rel="stylesheet" type="text/css" href="normalize.css" />
+      <link
+        rel="preload"
+        rel="stylesheet"
+        type="text/css"
+        href="normalize.css"
+      />
     </noscript>
     <link rel="stylesheet" type="text/css" href="index.css" />
 
@@ -47,7 +51,7 @@
           Add your email below to stay up-to-date with announcements and our
           launch deals.
         </p>
-        <form id="email-box">
+        <div id="email-box">
           <input id="email" type="email" placeholder="Email Address" />
           <img
             alt="error-message"
@@ -74,7 +78,7 @@
             }
           </script>
           <p id="message"></p>
-        </form>
+        </div>
       </section>
       <section class="image-section" id="image-section">
         <div id="main-img" />
