@@ -71,9 +71,15 @@
               if (validator.isEmail(email)) {
                 message.innerHTML = "";
                 errorIcon.hidden = true;
+                document
+                  .getElementById("email-box")
+                  .classList.remove("error-outline");
               } else {
                 message.innerHTML = "Please provide a valid email";
                 errorIcon.hidden = false;
+                document
+                  .getElementById("email-box")
+                  .classList.add("error-outline");
               }
             }
           </script>
