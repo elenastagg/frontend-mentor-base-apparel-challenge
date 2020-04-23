@@ -38,59 +38,58 @@
     <title>Frontend Mentor | Base Apparel coming soon page</title>
   </head>
   <body>
-    <main class="main">
-      <section id="header-section">
-        <img alt="logo" class="logo" src="images/logo.svg" />
-      </section>
-      <section id="content-section">
-        <h1 class="gold-title">WE'RE</h1>
-        <h1 class="title">COMING</h1>
-        <h1 class="title">SOON</h1>
-        <p class="copy">
-          Hello fellow shoppers! We're currently building our new fashion store.
-          Add your email below to stay up-to-date with announcements and our
-          launch deals.
-        </p>
-        <div id="email-box">
-          <input id="email" type="email" placeholder="Email Address" />
-          <img
-            alt="error-message"
-            src="./images/icon-error.svg"
-            class="error-icon"
-            id="error-icon"
-            hidden
-          />
-          <button class="arrow-button" type="button" onclick="validate()">
-            <img alt="arrow-button" src="images/icon-arrow.svg" />
-          </button>
-          <script>
-            function validate() {
-              const message = document.getElementById("message");
-              const email = document.getElementById("email").value;
-              const errorIcon = document.getElementById("error-icon");
-              if (validator.isEmail(email)) {
-                message.innerHTML = "";
-                errorIcon.hidden = true;
-                document
-                  .getElementById("email-box")
-                  .classList.remove("error-outline");
-              } else {
-                message.innerHTML = "Please provide a valid email";
-                errorIcon.hidden = false;
-                document
-                  .getElementById("email-box")
-                  .classList.add("error-outline");
-              }
+    <section id="header-section">
+      <img alt="logo" class="logo" src="images/logo.svg" />
+    </section>
+    <section id="content-section">
+      <h1 class="gold-title">WE'RE</h1>
+      <h1 class="title">COMING</h1>
+      <h1 class="title">SOON</h1>
+      <p class="copy">
+        Hello fellow shoppers! We're currently building our new fashion store.
+        Add your email below to stay up-to-date with announcements and our
+        launch deals.
+      </p>
+      <div id="email-box">
+        <input id="email" type="email" placeholder="Email Address" />
+        <img
+          alt="error-message"
+          src="./images/icon-error.svg"
+          class="error-icon"
+          id="error-icon"
+          hidden
+        />
+        <button class="arrow-button" type="button" onclick="validate()">
+          <img alt="arrow-button" src="images/icon-arrow.svg" />
+        </button>
+        <script>
+          function validate() {
+            const message = document.getElementById("message");
+            const email = document.getElementById("email").value;
+            const errorIcon = document.getElementById("error-icon");
+            if (validator.isEmail(email)) {
+              message.innerHTML = "";
+              errorIcon.hidden = true;
+              document
+                .getElementById("email-box")
+                .classList.remove("error-outline");
+            } else {
+              message.innerHTML = "Please provide a valid email";
+              errorIcon.hidden = false;
+              document
+                .getElementById("email-box")
+                .classList.add("error-outline");
             }
-          </script>
-          <p id="message"></p>
-        </div>
-      </section>
-      <section class="image-section" id="image-section">
-        <div id="main-img" />
-      </section>
+          }
+        </script>
+        <p id="message"></p>
+      </div>
+    </section>
+    <section class="image-section" id="image-section">
+      <div id="main-img" />
+    </section>
 
-      <!-- <footer>
+    <!-- <footer>
         <p class="attribution">
           Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge"
@@ -101,6 +100,5 @@
         >.
         </p>
       </footer> -->
-    </main>
   </body>
 </html>

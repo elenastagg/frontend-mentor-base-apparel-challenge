@@ -14,12 +14,10 @@ body {
   margin: 0;
   min-height: 100vh;
   font-family: "Josefin Sans", sans-serif;
-}
-main {
-  height: 100vh;
   display: grid;
   grid-template-rows: 10% 30% 50% 10%;
 }
+
 .logo {
   width: 35%;
 }
@@ -118,7 +116,7 @@ input {
 }
 
 @media (min-width: 1000px) {
-  main {
+  body {
     height: 100%;
     display: grid;
     grid-template-columns: 60% 40%;
@@ -128,6 +126,7 @@ input {
       linear-gradient(to right bottom, #f8bfbf, #ee8c8c);
     background-size: 60%;
   }
+
   #header-section {
     padding: 4rem 20%;
   }
